@@ -51,7 +51,7 @@ const Navbar = () => {
                     <img
                       src={logo}
                       alt="Furno"
-                      className="hidden lg:block h-18 w-auto"
+                      className="hidden lg:block h-16 w-auto"
                     />
             {/* Icon only for small screens */}
             <img
