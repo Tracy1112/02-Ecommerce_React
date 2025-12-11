@@ -1,8 +1,8 @@
-# Nordic Nest E-commerce Platform
+# Furno E-commerce Platform
 
 Modern headless e-commerce platform built with React 18, Redux Toolkit, and Strapi CMS.
 
-**Live Demo:** [Deploy to Vercel and add link here]  
+**Live Demo:** [https://furno-studio.vercel.app/](https://furno-studio.vercel.app/)  
 **Repository:** [https://github.com/Tracy1112/02-Ecommerce_React](https://github.com/Tracy1112/02-Ecommerce_React)
 
 ## ✨ Features
