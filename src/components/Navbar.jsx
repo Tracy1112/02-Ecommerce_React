@@ -51,13 +51,13 @@ const Navbar = () => {
                     <img
                       src={logo}
                       alt="Furno"
-                      className="hidden lg:block h-12 w-auto"
+                      className="hidden lg:block h-14 w-auto"
                     />
             {/* Icon only for small screens */}
             <img
               src={logoIcon}
                       alt="Furno"
-                      className="lg:hidden h-11 w-11"
+                      className="lg:hidden h-12 w-12"
             />
           </NavLink>
           {/* 1-1. Dropdown nav links: small screen appear*/}
