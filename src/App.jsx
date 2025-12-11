@@ -15,7 +15,7 @@ import {
   Orders,
 } from './pages'
 
-import { ErrorElement } from './components'
+import { ErrorElement, ErrorBoundary } from './components'
 import { loader as landingLoader } from './pages/Landing'
 import { loader as singleProductLoader } from './pages/SingleProduct'
 import { loader as productsLoader } from './pages/Products'
@@ -95,10 +95,12 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
+    <ErrorBoundary>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
+    </ErrorBoundary>
   )
 }
 

@@ -3,11 +3,10 @@ import { NavLink } from 'react-router-dom'
 import { BsCart3, BsMoonFill, BsSunFill } from 'react-icons/bs'
 import { FaBarsStaggered } from 'react-icons/fa6'
 import NavLinks from './NavLinks'
-// toggle theme
-import { useState, useEffect } from 'react'
-
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleTheme } from '../features/user/userSlice'
+import logo from '../assets/logo.svg'
+import logoIcon from '../assets/logo-icon.svg'
 
 // const themes = {
 //   winter: 'winter',
@@ -42,13 +41,24 @@ const Navbar = () => {
   return (
     <nav className="bg-base-200">
       <div className="navbar align-element ">
-        {/* 1. logo start: small screen hidden */}
+        {/* 1. logo start */}
         <div className="navbar-start">
           <NavLink
             to="/"
-            className="hidden lg:flex btn btn-primary text-3xl items-center "
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            TK
+            {/* Full logo for large screens */}
+            <img
+              src={logo}
+              alt="Nordic Nest"
+              className="hidden lg:block h-8 w-auto"
+            />
+            {/* Icon only for small screens */}
+            <img
+              src={logoIcon}
+              alt="Nordic Nest"
+              className="lg:hidden h-8 w-8"
+            />
           </NavLink>
           {/* 1-1. Dropdown nav links: small screen appear*/}
           <div className="dropdown">

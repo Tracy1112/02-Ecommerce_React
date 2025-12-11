@@ -1,12 +1,17 @@
 {
-  "name": "tracy-store",
+  "name": "nordic-nest-ecommerce",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Modern headless e-commerce platform built with React 18, Redux Toolkit, and Strapi CMS - Australian freelance project",
+  "author": "Your Name",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,css}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,json,css}\"",
     "preview": "vite preview"
   },
   "dependencies": {

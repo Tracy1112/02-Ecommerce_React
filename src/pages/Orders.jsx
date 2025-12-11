@@ -44,12 +44,13 @@ export const loader =
 
       return { orders: response.data.data, meta: response.data.meta }
     } catch (error) {
-      console.log(error)
       const errorMessage =
         error?.response?.data?.error?.message ||
-        'there was an error placing your order'
+        'there was an error fetching your orders'
+      if (error?.response?.status === 401 || error?.response?.status === 403) {
+        return redirect('/login')
+      }
       toast.error(errorMessage)
-      if (error?.response?.status === 401 || 403) return redirect('/login')
       return null
     }
   }
