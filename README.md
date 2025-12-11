@@ -3,15 +3,7 @@
 Modern headless e-commerce platform built with React 18, Redux Toolkit, and Strapi CMS.
 
 **Live Demo:** [Deploy to Vercel and add link here]  
-**GitHub:** [Add your GitHub link here]
-
-## Features
-
-- Product catalog with filtering, sorting, and pagination
-- Shopping cart with persistent storage
-- User authentication and order management
-- Responsive design, mobile-first approach
-- Performance optimized (Lighthouse 95+)
+**Repository:** [https://github.com/Tracy1112/02-Ecommerce_React](https://github.com/Tracy1112/02-Ecommerce_React)
 
 ## ✨ Features
 
@@ -73,8 +65,8 @@ Modern headless e-commerce platform built with React 18, Redux Toolkit, and Stra
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/nordic-nest.git
-cd nordic-nest
+git clone https://github.com/Tracy1112/02-Ecommerce_React.git
+cd 02-Ecommerce_React
 
 # Install dependencies
 npm install
