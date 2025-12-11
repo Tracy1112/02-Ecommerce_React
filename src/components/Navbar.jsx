@@ -48,16 +48,16 @@ const Navbar = () => {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             {/* Full logo for large screens */}
-            <img
-              src={logo}
-              alt="Nordic Nest"
-              className="hidden lg:block h-8 w-auto"
-            />
+                    <img
+                      src={logo}
+                      alt="Furno"
+                      className="hidden lg:block h-12 w-auto"
+                    />
             {/* Icon only for small screens */}
             <img
               src={logoIcon}
-              alt="Nordic Nest"
-              className="lg:hidden h-8 w-8"
+                      alt="Furno"
+                      className="lg:hidden h-11 w-11"
             />
           </NavLink>
           {/* 1-1. Dropdown nav links: small screen appear*/}
