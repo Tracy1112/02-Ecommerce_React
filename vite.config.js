@@ -6,19 +6,18 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: 'jsdom',
+    environment: 'node', // 使用 node 环境，避免 jsdom 的兼容性问题
     setupFiles: './src/test/setup.js',
-    css: true,
-    testTimeout: 30000, // 增加到 30 秒
+    css: false, // node 环境不需要 CSS
+    testTimeout: 30000,
     hookTimeout: 30000,
     teardownTimeout: 30000,
-    isolate: false, // 改为 false 以避免某些兼容性问题
-    include: ['src/**/*.{test,spec}.{js,jsx}'], // 明确指定测试文件模式
-    // 添加 pool 配置以避免 jsdom 相关问题
-    pool: 'forks',
+    include: ['src/**/*.{test,spec}.{js,jsx}'],
+    // 使用 threads pool 以获得更好的性能
+    pool: 'threads',
     poolOptions: {
-      forks: {
-        singleFork: true,
+      threads: {
+        singleThread: false,
       },
     },
   },
