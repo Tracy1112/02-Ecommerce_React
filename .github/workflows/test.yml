@@ -35,7 +35,7 @@ jobs:
         timeout-minutes: 3
 
       - name: Run tests
-        run: npm run test -- --run --reporter=verbose --no-coverage
+        run: npm run test -- --run --reporter=verbose --no-coverage --bail
         continue-on-error: false
         timeout-minutes: 5
 
