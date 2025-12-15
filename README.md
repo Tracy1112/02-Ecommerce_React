@@ -175,8 +175,8 @@ _Shopping cart with real-time updates, order summary, and checkout flow_
 
 ```bash
 # Clone the repository
-git clone https://github.com/Tracy1112/02-Ecommerce_React.git
-cd 02-Ecommerce_React
+git clone https://github.com/Tracy1112/Furno-E-commerce-Platform.git
+cd Furno-E-commerce-Platform
 
 # Install dependencies
 npm install
@@ -441,7 +441,6 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
 - **Performance**: Optimized for fast loading and smooth user experience
 - **Australian Market**: Fully localized with AUD currency and GST compliance
 
-
 ## 📝 License
 
 MIT License - feel free to use this project for learning purposes.
@@ -451,7 +450,7 @@ MIT License - feel free to use this project for learning purposes.
 **Tracy1112**
 
 - GitHub: [@Tracy1112](https://github.com/Tracy1112)
-- Project Link: [https://github.com/Tracy1112/02-Ecommerce_React](https://github.com/Tracy1112/02-Ecommerce_React)
+- Project Link: [https://github.com/Tracy1112/Furno-E-commerce-Platform](https://github.com/Tracy1112/Furno-E-commerce-Platform)
 
 ---
 
