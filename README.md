@@ -32,6 +32,16 @@ Furno is a modern e-commerce platform developed as a freelance project for the A
 - **User Experience**: Responsive design, accessibility, error handling
 - **Best Practices**: Clean code architecture, testing, CI/CD
 
+### 📋 Project Background
+
+This project was developed as a freelance e-commerce solution for an Australian client. It demonstrates real-world development practices including:
+
+- **Client Requirements**: Understanding and implementing business requirements (cart, checkout, order management)
+- **Production-Ready Code**: Comprehensive error handling, loading states, and user feedback
+- **Australian Market Localization**: AUD currency formatting, GST (10%) tax calculation, and Australian locale support
+- **Full-Stack Integration**: Seamless integration with Strapi CMS backend for content management
+- **Scalable Architecture**: Feature-based organization for easy maintenance and future enhancements
+
 ### 🏆 Project Highlights
 
 - ✅ **Production-Ready**: Fully functional e-commerce with cart, checkout, and order management
@@ -431,13 +441,6 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
 - **Performance**: Optimized for fast loading and smooth user experience
 - **Australian Market**: Fully localized with AUD currency and GST compliance
 
-## 🤝 Contributing
-
-This is a portfolio project, but contributions are welcome! Please feel free to:
-
-- Report bugs
-- Suggest features
-- Submit pull requests
 
 ## 📝 License
 
