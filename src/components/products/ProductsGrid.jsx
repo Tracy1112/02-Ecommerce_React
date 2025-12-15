@@ -22,12 +22,12 @@ const ProductsGrid = () => {
             to={`/products/${product.id}`}
             className="card w-full  shadow-xl hover:shadow-2xl transition duration-300 "
           >
-            <figure className="px-4 pt-4 bg-base-200 rounded-xl flex items-center justify-center min-h-[256px] md:min-h-[192px]">
+            <figure className="px-4 pt-4">
               <img
                 src={imageUrl}
                 alt={title}
                 loading="lazy"
-                className="rounded-xl max-h-64 md:max-h-48 w-full object-contain"
+                className="rounded-xl h-64 md:h-48 w-full object-cover"
                 onError={(e) => {
                   // Fallback if image fails to load
                   e.target.style.display = 'none'
