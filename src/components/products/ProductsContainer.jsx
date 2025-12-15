@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLoaderData } from 'react-router-dom'
-import { ProductsList, ProductsGrid } from './index'
+import { ProductsList, ProductsGrid } from '../index'
 import { useState } from 'react'
 import { BsFillGridFill, BsList } from 'react-icons/bs'
 

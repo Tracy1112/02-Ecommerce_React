@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLoaderData, Link } from 'react-router-dom'
-import { formatPrice } from '../utils'
+import { formatPrice } from '../../utils'
 
 const ProductsList = () => {
   const { products } = useLoaderData()

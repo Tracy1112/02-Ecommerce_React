@@ -1,8 +1,8 @@
 import React from 'react'
-import { customFetch, formatPrice } from '../utils'
+import { customFetch, formatPrice } from '../../utils'
 import { Form, redirect } from 'react-router-dom'
-import { FormInput, SubmitBtn } from './index'
-import { clearCart } from '../features/cart/cartSlice'
+import { FormInput, SubmitBtn } from '../index'
+import { clearCart } from '../../features/cart/cartSlice'
 import { toast } from 'react-toastify'
 
 export const action =

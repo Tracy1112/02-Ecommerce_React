@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { formatPrice } from '../utils'
+import { formatPrice } from '../../utils'
 
 const CartTotals = () => {
   const { cartTotal, shipping, tax, orderTotal } = useSelector(

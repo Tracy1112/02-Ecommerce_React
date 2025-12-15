@@ -4,9 +4,9 @@ import { BsCart3, BsMoonFill, BsSunFill } from 'react-icons/bs'
 import { FaBarsStaggered } from 'react-icons/fa6'
 import NavLinks from './NavLinks'
 import { useSelector, useDispatch } from 'react-redux'
-import { toggleTheme } from '../features/user/userSlice'
-import logo from '../assets/logo.svg'
-import logoIcon from '../assets/logo-icon.svg'
+import { toggleTheme } from '../../features/user/userSlice'
+import logo from '../../assets/logo.svg'
+import logoIcon from '../../assets/logo-icon.svg'
 
 // const themes = {
 //   winter: 'winter',

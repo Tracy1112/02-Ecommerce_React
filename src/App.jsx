@@ -25,7 +25,7 @@ import { loader as ordersLoader } from './pages/Orders'
 import { action as registerAction } from './pages/Register'
 import { action as loginAction } from './pages/Login'
 import { store } from './store'
-import { action as checkoutFormAction } from './components/CheckoutForm'
+import { action as checkoutFormAction } from './components/forms/CheckoutForm'
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 

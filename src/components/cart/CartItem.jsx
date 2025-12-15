@@ -1,6 +1,6 @@
 import React from 'react'
-import { formatPrice, generateAmountOptions } from '../utils'
-import { removeItem, editItem } from '../features/cart/cartSlice'
+import { formatPrice, generateAmountOptions } from '../../utils'
+import { removeItem, editItem } from '../../features/cart/cartSlice'
 import { useDispatch } from 'react-redux'
 
 const CartItem = ({ cartItem }) => {

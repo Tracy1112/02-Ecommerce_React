@@ -32,27 +32,6 @@ dist-ssr
 .vercel
 .npm-cache
 
-# Interview preparation documents (keep local, don't commit to GitHub)
-面试准备材料.md
-简历项目描述.md
-项目转换指南.md
-执行行动计划.md
-快速参考指南.md
-澳洲市场简历描述.md
-真实项目开发指南.md
-文档整理建议.md
-项目转换完成总结.md
-PRODUCTION_ROADMAP.md
-CODE_REVIEW.md
-QUICK_START_FIXES.md
-README_PROFESSIONAL.md
-测试报告.md
-功能增强完成总结.md
-代码审查报告.md
-GITHUB_SETUP.md
-GITHUB_OPTIMIZATION_CHECKLIST.md
-AUSTRALIAN_FREELANCE_ASSESSMENT.md
-PERFORMANCE_AUDIT.md
-TESTING_SETUP.md
-REMAINING_TASKS.md
-PROJECT_STATUS.md
+# Temporary scripts and internal documentation
+*.sh
+change_commit_msg.sh
