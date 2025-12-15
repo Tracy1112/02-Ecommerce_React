@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLoaderData } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 import { ProductsList, ProductsGrid } from './index'
 import { useState } from 'react'
 import { BsFillGridFill, BsList } from 'react-icons/bs'

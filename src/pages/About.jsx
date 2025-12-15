@@ -24,7 +24,7 @@ const About = () => {
           for its durability and beauty.
         </p>
         <p>
-          We're here to make your space feel like home with affordable,
+          We&apos;re here to make your space feel like home with affordable,
           high-quality furniture and exceptional customer care. Discover your
           perfect pieces and let us help you transform your space.
         </p>

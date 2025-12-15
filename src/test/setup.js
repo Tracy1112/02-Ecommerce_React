@@ -1,4 +1,4 @@
-import { expect, afterEach, vi } from 'vitest'
+import { expect, afterEach } from 'vitest'
 import { cleanup } from '@testing-library/react'
 import * as matchers from '@testing-library/jest-dom/matchers'
 
@@ -29,8 +29,8 @@ Object.defineProperty(window, 'localStorage', {
 })
 
 // Also set up for global scope (for Node.js environment)
-if (typeof global !== 'undefined') {
-  Object.defineProperty(global, 'localStorage', {
+if (typeof globalThis !== 'undefined') {
+  Object.defineProperty(globalThis, 'localStorage', {
     value: localStorageMock,
     writable: true,
   })

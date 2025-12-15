@@ -7,6 +7,12 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 export default [
   { ignores: ['dist'] },
   {
+    files: ['**/*.config.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+  {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -33,6 +39,17 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      // Allow unused React import (common in React 18 with new JSX transform)
+      'no-unused-vars': [
+        'error',
+        {
+          varsIgnorePattern: '^(React|error|response)$',
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
+      // Disable prop-types validation (using TypeScript-style props)
+      'react/prop-types': 'off',
     },
   },
 ]

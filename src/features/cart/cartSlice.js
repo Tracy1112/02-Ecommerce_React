@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { json } from 'react-router-dom'
 
 /**
  * Cart Configuration from Environment Variables
@@ -59,10 +58,10 @@ const cartSlice = createSlice({
     },
     /**
      * Clears entire cart and resets to default state
-     * @param {Object} state - Current cart state
+     * @param {Object} _state - Current cart state (unused)
      * @returns {Object} Default cart state
      */
-    clearCart: (state) => {
+    clearCart: (_state) => {
       localStorage.setItem('cart', JSON.stringify(defaultState))
       return defaultState
     },

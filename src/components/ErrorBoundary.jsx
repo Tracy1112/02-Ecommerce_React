@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 /**
  * Error Boundary Component
@@ -35,7 +34,7 @@ class ErrorBoundary extends React.Component {
             <h1 className="text-6xl font-bold text-error mb-4">⚠️</h1>
             <h2 className="text-3xl font-bold mb-4">Something went wrong</h2>
             <p className="text-lg mb-6 text-base-content/70">
-              We're sorry, but something unexpected happened. Please try again
+              We&apos;re sorry, but something unexpected happened. Please try again
               or contact support if the problem persists.
             </p>
             <div className="flex gap-4 justify-center">
