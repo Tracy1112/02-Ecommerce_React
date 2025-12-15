@@ -1,33 +1,15 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach } from 'vitest'
 import { configureStore } from '@reduxjs/toolkit'
 import cartReducer, { addItem, removeItem, editItem, clearCart } from './cartSlice'
-
-// Mock localStorage
-const localStorageMock = (() => {
-  let store = {}
-  return {
-    getItem: (key) => store[key] || null,
-    setItem: (key, value) => {
-      store[key] = value.toString()
-    },
-    removeItem: (key) => {
-      delete store[key]
-    },
-    clear: () => {
-      store = {}
-    },
-  }
-})()
-
-Object.defineProperty(window, 'localStorage', {
-  value: localStorageMock,
-})
 
 describe('cartSlice', () => {
   let store
 
   beforeEach(() => {
-    localStorageMock.clear()
+    // Clear localStorage before each test
+    if (typeof window !== 'undefined' && window.localStorage) {
+      window.localStorage.clear()
+    }
     store = configureStore({
       reducer: {
         cartState: cartReducer,
