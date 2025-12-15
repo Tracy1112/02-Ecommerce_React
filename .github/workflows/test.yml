@@ -27,10 +27,12 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        timeout-minutes: 5
 
       - name: Run linter
         run: npm run lint -- --max-warnings 100
         continue-on-error: false
+        timeout-minutes: 3
 
       - name: Run tests
         run: npm run test -- --run --reporter=verbose --no-coverage
