@@ -30,6 +30,7 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+.npm-cache
 
 # Interview preparation documents (keep local, don't commit to GitHub)
 面试准备材料.md
