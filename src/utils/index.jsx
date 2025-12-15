@@ -31,7 +31,9 @@ customFetch.interceptors.request.use(
         config.headers.Authorization = `Bearer ${user.token}`
       }
     } catch (error) {
-      console.error('Error parsing user from localStorage:', error)
+      if (import.meta.env.DEV) {
+        console.error('Error parsing user from localStorage:', error)
+      }
     }
     return config
   },
@@ -60,13 +62,14 @@ customFetch.interceptors.response.use(
 
 /**
  * Formats price from cents to currency string
+ * Uses Australian Dollar (AUD) for Australian market
  * @param {number} price - Price in cents
- * @returns {string} Formatted price string (e.g., "$99.99")
+ * @returns {string} Formatted price string (e.g., "A$99.99")
  */
 export const formatPrice = (price) => {
-  const dollarsAmount = new Intl.NumberFormat('en-US', {
+  const dollarsAmount = new Intl.NumberFormat('en-AU', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'AUD',
   }).format((price / 100).toFixed(2))
   return dollarsAmount
 }

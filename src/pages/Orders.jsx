@@ -31,7 +31,7 @@ export const loader =
     const user = store.getState().userState.user
 
     if (!user) {
-      toast.warn('You must logged in to view orders')
+      toast.warn('You must be logged in to view orders')
       return redirect('/login')
     }
     const params = Object.fromEntries([
