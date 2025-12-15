@@ -30,9 +30,9 @@ const Navbar = () => {
   //   localStorage.setItem('theme', theme)
   // }, [theme])
 
-  const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart)
+  const numItemsInCart = useSelector(state => state.cartState.numItemsInCart)
 
-  const theme = useSelector((state) => state.userState.theme)
+  const theme = useSelector(state => state.userState.theme)
   const dispatch = useDispatch()
   const handleTheme = () => {
     dispatch(toggleTheme())
@@ -49,22 +49,18 @@ const Navbar = () => {
             aria-label="Furno home page"
           >
             {/* Full logo for large screens */}
-                    <img
-                      src={logo}
-                      alt="Furno - Modern Furniture & Living"
-                      className="hidden lg:block h-14 w-auto"
-                    />
-            {/* Icon only for small screens */}
             <img
-              src={logoIcon}
-                      alt="Furno"
-                      className="lg:hidden h-13 w-13"
+              src={logo}
+              alt="Furno - Modern Furniture & Living"
+              className="hidden lg:block h-14 w-auto"
             />
+            {/* Icon only for small screens */}
+            <img src={logoIcon} alt="Furno" className="lg:hidden h-13 w-13" />
           </NavLink>
           {/* 1-1. Dropdown nav links: small screen appear*/}
           <div className="dropdown">
-            <label 
-              tabIndex={0} 
+            <label
+              tabIndex={0}
               className="btn btn-ghost lg:hidden"
               aria-label="Open navigation menu"
               aria-expanded="false"
@@ -103,14 +99,14 @@ const Navbar = () => {
           </label>
 
           {/* 4. cart links */}
-          <NavLink 
-            to="cart" 
+          <NavLink
+            to="cart"
             className="btn btn-ghost btn-circle btn-md ml-4"
             aria-label={`Shopping cart with ${numItemsInCart} items`}
           >
             <div className="indicator">
               <BsCart3 className="h-6 w-6" aria-hidden="true" />
-              <span 
+              <span
                 className="badge badge-sm badge-primary indicator-item"
                 aria-label={`${numItemsInCart} items in cart`}
               >

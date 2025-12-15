@@ -144,6 +144,10 @@ The project follows WCAG 2.1 guidelines:
 - Focus management
 - Semantic HTML structure
 
+## CI/CD
+
+Automated testing via GitHub Actions. Tests run on every push and pull request.
+
 ## Deployment
 
 Deployed on Vercel. See `DEPLOYMENT.md` for details.
