@@ -34,7 +34,7 @@ const Login = () => {
       })
       dispatch(loginUser(response.data))
       navigate('/')
-    } catch (error) {
+    } catch (_error) {
       toast.error('guest user login error. please try later.')
     }
   }
