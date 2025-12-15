@@ -35,3 +35,12 @@ dist-ssr
 # Temporary scripts and internal documentation
 *.sh
 change_commit_msg.sh
+
+# Local documentation (not for GitHub)
+# Only README.md and DEPLOYMENT.md should be in GitHub
+GITHUB_ACTIONS_GUIDE.md
+DEBUG_TESTS.md
+PROJECT_REVIEW.md
+*.md
+!README.md
+!DEPLOYMENT.md

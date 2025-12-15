@@ -24,7 +24,7 @@
 
 ## 🎯 Overview
 
-Furno is a modern e-commerce platform designed to demonstrate proficiency in:
+Furno is a modern e-commerce platform developed as a freelance project for the Australian market. This production-ready application demonstrates real-world development practices and proficiency in:
 
 - **State Management**: Redux Toolkit for client-side state, React Query for server state
 - **Modern React Patterns**: Hooks, custom hooks, component composition
@@ -109,7 +109,7 @@ _Shopping cart with real-time updates, order summary, and checkout flow_
 
 - **Vitest 4.0** - Fast unit test runner
 - **React Testing Library** - Component testing utilities
-- **jsdom** - DOM environment for testing
+- **Node environment** - Test environment optimized for unit and integration tests
 
 ### Development Tools
 
@@ -138,11 +138,20 @@ _Shopping cart with real-time updates, order summary, and checkout flow_
 
 ### Design Decisions
 
-1. **Feature-Based Organization**: Components organized by domain (cart, products, forms)
-2. **Separation of Concerns**: Client state (Redux) vs Server state (React Query)
-3. **Code Splitting**: Route-based lazy loading for optimal bundle size
-4. **Error Boundaries**: Graceful error handling at component level
-5. **API Abstraction**: Centralized API client with interceptors
+1. **Feature-Based Organization**: Components organized by domain (cart, products, forms) for better maintainability and scalability
+2. **Separation of Concerns**: Client state (Redux) vs Server state (React Query) - Redux for UI state, React Query for server data
+3. **Code Splitting**: Route-based lazy loading for optimal bundle size and faster initial load
+4. **Error Boundaries**: Graceful error handling at component level to prevent app crashes
+5. **API Abstraction**: Centralized API client with interceptors for consistent error handling and authentication
+
+### Why These Technologies?
+
+- **React 18**: Latest features (Concurrent Rendering, Suspense) for better user experience
+- **Redux Toolkit**: Simplified Redux for complex client-side state management (cart, user preferences)
+- **React Query**: Perfect for server state caching, synchronization, and background updates
+- **Vite**: Fast development experience and optimized production builds
+- **Tailwind CSS + DaisyUI**: Rapid UI development with consistent design system
+- **Strapi CMS**: Headless CMS allows non-technical clients to manage content independently
 
 ## 🚀 Getting Started
 
@@ -419,7 +428,8 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
 - **Redux Slices**: 2 (cart, user)
 - **Test Coverage**: Core utilities and Redux logic
 - **Build Size**: Optimized with code splitting
-- **Performance**: Lighthouse score 90+
+- **Performance**: Optimized for fast loading and smooth user experience
+- **Australian Market**: Fully localized with AUD currency and GST compliance
 
 ## 🤝 Contributing
 
