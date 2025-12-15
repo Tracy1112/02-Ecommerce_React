@@ -5,8 +5,8 @@ import { formatPrice } from '../../utils'
 const ProductsGrid = () => {
   const { products } = useLoaderData()
   // Get base URL for Strapi images
-  const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:1337'
-  const strapiBaseURL = baseURL.replace('/api', '')
+  const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:1337/api'
+  const strapiBaseURL = apiUrl.replace('/api', '')
   
   return (
     <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

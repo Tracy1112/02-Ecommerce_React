@@ -3,8 +3,25 @@ import axios from 'axios'
 /**
  * API Base URL from environment variables
  * Falls back to localhost for development if not set
+ * In production, VITE_API_URL must be set in Vercel environment variables
  */
-const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:1337/api'
+const getBaseURL = () => {
+  const apiUrl = import.meta.env.VITE_API_URL
+  
+  if (!apiUrl && import.meta.env.PROD) {
+    console.error(
+      '❌ VITE_API_URL is not set in production environment!\n' +
+      'Please set VITE_API_URL in Vercel environment variables:\n' +
+      'https://strapi-store-server.onrender.com/api'
+    )
+    // Return a placeholder that will fail clearly
+    return 'https://strapi-store-server.onrender.com/api'
+  }
+  
+  return apiUrl || 'http://localhost:1337/api'
+}
+
+const baseURL = getBaseURL()
 
 /**
  * Axios instance configured for the application
