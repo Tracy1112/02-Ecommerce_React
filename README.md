@@ -10,6 +10,7 @@
 ## 📋 Table of Contents
 
 - [Overview](#overview)
+- [Screenshots](#-screenshots)
 - [Key Features](#key-features)
 - [Tech Stack](#tech-stack)
 - [Project Architecture](#project-architecture)
@@ -40,6 +41,23 @@ Furno is a modern e-commerce platform designed to demonstrate proficiency in:
 - ✅ **Accessible**: WCAG 2.1 compliant with ARIA labels and keyboard navigation
 - ✅ **Performance Optimized**: React Query caching, code splitting, lazy loading
 - ✅ **CI/CD Ready**: Automated testing via GitHub Actions
+
+## 📸 Screenshots
+
+### Homepage
+
+![Homepage](./screenshots/homepage.png)
+_Modern, clean homepage with hero section and featured products showcase_
+
+### Products Page
+
+![Products](./screenshots/products.png)
+_Advanced product listing with filtering, sorting, and grid/list view toggle_
+
+### Shopping Cart
+
+![Cart](./screenshots/cart.png)
+_Shopping cart with real-time updates, order summary, and checkout flow_
 
 ## ✨ Key Features
 
