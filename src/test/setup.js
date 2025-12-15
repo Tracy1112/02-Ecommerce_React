@@ -1,4 +1,4 @@
-import { expect, afterEach, vi } from 'vitest'
+import { expect, afterEach } from 'vitest'
 import { cleanup } from '@testing-library/react'
 import * as matchers from '@testing-library/jest-dom/matchers'
 
@@ -6,8 +6,9 @@ import * as matchers from '@testing-library/jest-dom/matchers'
 expect.extend(matchers)
 
 // Mock URL and URLSearchParams to avoid webidl-conversions errors
-global.URL = class URL {
-  constructor(url, base) {
+// eslint-disable-next-line no-undef
+globalThis.URL = class URL {
+  constructor(url, _base) {
     if (typeof url === 'string') {
       this.href = url
     }
@@ -17,7 +18,8 @@ global.URL = class URL {
   }
 }
 
-global.URLSearchParams = class URLSearchParams {
+// eslint-disable-next-line no-undef
+globalThis.URLSearchParams = class URLSearchParams {
   constructor(init) {
     this.params = new Map()
     if (init) {

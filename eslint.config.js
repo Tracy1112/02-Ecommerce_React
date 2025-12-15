@@ -65,4 +65,20 @@ export default [
       'react-refresh/only-export-components': 'off',
     },
   },
+  // Test files configuration
+  {
+    files: ['**/*.test.{js,jsx}', '**/test/**/*.{js,jsx}', '**/setup.js'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        globalThis: 'readonly',
+        global: 'readonly',
+      },
+    },
+    rules: {
+      'no-undef': 'off', // Allow global variables in test files
+      'react-refresh/only-export-components': 'off',
+    },
+  },
 ]
