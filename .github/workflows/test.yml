@@ -9,6 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     strategy:
       matrix:
@@ -32,8 +33,9 @@ jobs:
         continue-on-error: false
 
       - name: Run tests
-        run: npm run test -- --run
+        run: npm run test -- --run --reporter=verbose --no-coverage
         continue-on-error: false
+        timeout-minutes: 5
 
       - name: Check code formatting
         run: |
