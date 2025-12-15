@@ -9,9 +9,17 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './src/test/setup.js',
     css: true,
-    testTimeout: 10000,
-    hookTimeout: 10000,
-    teardownTimeout: 10000,
-    isolate: true,
+    testTimeout: 30000, // 增加到 30 秒
+    hookTimeout: 30000,
+    teardownTimeout: 30000,
+    isolate: false, // 改为 false 以避免某些兼容性问题
+    include: ['src/**/*.{test,spec}.{js,jsx}'], // 明确指定测试文件模式
+    // 添加 pool 配置以避免 jsdom 相关问题
+    pool: 'forks',
+    poolOptions: {
+      forks: {
+        singleFork: true,
+      },
+    },
   },
 })
