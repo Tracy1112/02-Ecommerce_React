@@ -11,5 +11,7 @@ export default defineConfig({
     css: true,
     testTimeout: 10000,
     hookTimeout: 10000,
+    teardownTimeout: 10000,
+    isolate: true,
   },
 })
