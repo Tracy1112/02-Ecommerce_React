@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FormCheckbox = ({ label, name, defaultValue, size }) => {
+const FormCheckbox = ({ label, name, defaultValue, size, ariaLabel }) => {
   return (
     <div className="form-control items-center">
       <label htmlFor={name} className="label cursor-pointer">
@@ -8,9 +8,11 @@ const FormCheckbox = ({ label, name, defaultValue, size }) => {
       </label>
       <input
         type="checkbox"
+        id={name}
         name={name}
         defaultChecked={defaultValue}
         className={`checkbox checkbox-primary ${size}`}
+        aria-label={ariaLabel || label}
       />
     </div>
   )

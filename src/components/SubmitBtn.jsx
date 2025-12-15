@@ -9,11 +9,13 @@ const SubmitBtn = ({ text }) => {
       type="submit"
       className="btn btn-primary btn-block"
       disabled={isSubmitting}
+      aria-label={isSubmitting ? 'Submitting form' : text || 'Submit form'}
+      aria-busy={isSubmitting}
     >
       {isSubmitting ? (
         <>
-          <span className="loading loading-spinner"></span>
-          sending...
+          <span className="loading loading-spinner" aria-hidden="true"></span>
+          <span aria-live="polite">sending...</span>
         </>
       ) : (
         text || 'submit'

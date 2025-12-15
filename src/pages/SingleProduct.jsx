@@ -105,22 +105,28 @@ const SingleProduct = () => {
           </div>
           {/* AMOUNT */}
           <div className="form-control w-full max-w-xs">
-            <label className="label">
+            <label htmlFor="product-amount" className="label">
               <h4 className="text-md font-medium tracking-wider capitalize">
                 amount
               </h4>
             </label>
             <select
+              id="product-amount"
               className="select select-secondary select-bordered select-md"
               value={amount}
               onChange={handleAmount}
+              aria-label="Select product quantity"
             >
               {generateAmountOptions(20)}
             </select>
           </div>
           {/* CART BUTTON */}
           <div className="mt-10 ">
-            <button className="btn btn-secondary btn-md" onClick={addToCart}>
+            <button 
+              className="btn btn-secondary btn-md" 
+              onClick={addToCart}
+              aria-label={`Add ${amount} item${amount > 1 ? 's' : ''} to cart`}
+            >
               Add to bag
             </button>
           </div>

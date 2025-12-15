@@ -51,11 +51,19 @@ const Filters = () => {
       <FormCheckbox label="free shipping" name="shipping" size="checkbox-sm" />
 
       {/* 7. button  */}
-      <button type="submit" className="btn btn-primary btn-sm">
+      <button 
+        type="submit" 
+        className="btn btn-primary btn-sm"
+        aria-label="Apply filters and search products"
+      >
         search
       </button>
       {/* 8. link */}
-      <Link to="/products" className="btn btn-accent btn-sm">
+      <Link 
+        to="/products" 
+        className="btn btn-accent btn-sm"
+        aria-label="Reset all filters"
+      >
         reset
       </Link>
     </Form>

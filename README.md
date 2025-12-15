@@ -43,7 +43,8 @@ Modern headless e-commerce platform built with React 18, Redux Toolkit, and Stra
   - Responsive navigation
   - Toast notifications for user feedback
   - Loading states and error handling
-  - Accessible form components
+  - Accessible form components with ARIA labels
+  - Keyboard navigation support
 
 ## Tech Stack
 
@@ -89,6 +90,9 @@ Visit `http://localhost:5173`
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
+- `npm run test` - Run tests with Vitest
+- `npm run test:ui` - Run tests with UI
+- `npm run test:coverage` - Run tests with coverage report
 
 ## Project Structure
 
@@ -100,6 +104,45 @@ src/
 ├── utils/          # Utilities and API client
 └── assets/         # Static assets
 ```
+
+## Testing
+
+The project uses Vitest for unit testing and React Testing Library for component testing.
+
+```bash
+# Run tests
+npm run test
+
+# Run tests with UI
+npm run test:ui
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+Test coverage includes:
+- Utility functions (formatPrice, handleApiError)
+- Redux slices (cartSlice)
+- Component accessibility
+
+## Performance
+
+Performance optimizations implemented:
+- React Query caching (5-minute stale time)
+- Image lazy loading
+- Code splitting via Vite
+- DNS prefetching for external resources
+
+See `PERFORMANCE_AUDIT.md` for detailed Lighthouse scores and optimization recommendations.
+
+## Accessibility
+
+The project follows WCAG 2.1 guidelines:
+- ARIA labels on interactive elements
+- Keyboard navigation support
+- Screen reader compatibility
+- Focus management
+- Semantic HTML structure
 
 ## Deployment
 

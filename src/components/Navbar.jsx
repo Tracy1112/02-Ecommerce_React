@@ -46,11 +46,12 @@ const Navbar = () => {
           <NavLink
             to="/"
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            aria-label="Furno home page"
           >
             {/* Full logo for large screens */}
                     <img
                       src={logo}
-                      alt="Furno"
+                      alt="Furno - Modern Furniture & Living"
                       className="hidden lg:block h-14 w-auto"
                     />
             {/* Icon only for small screens */}
@@ -62,8 +63,14 @@ const Navbar = () => {
           </NavLink>
           {/* 1-1. Dropdown nav links: small screen appear*/}
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <FaBarsStaggered className="h-6 w-6" />
+            <label 
+              tabIndex={0} 
+              className="btn btn-ghost lg:hidden"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              role="button"
+            >
+              <FaBarsStaggered className="h-6 w-6" aria-hidden="true" />
             </label>
             <ul
               tabIndex={0}
@@ -83,22 +90,30 @@ const Navbar = () => {
         {/* 3. theme icons */}
 
         <div className="navbar-end">
-          <label className="swap swap-rotate ">
+          <label className="swap swap-rotate" aria-label="Toggle theme">
             <input
               type="checkbox"
               onChange={handleTheme}
               checked={theme === 'dracula'}
+              aria-label="Switch between light and dark theme"
             />
-            <BsSunFill className="swap-on h-4 w-4" />
-            <BsMoonFill className="swap-off h-4 w-4" />
+            <BsSunFill className="swap-on h-4 w-4" aria-hidden="true" />
+            <BsMoonFill className="swap-off h-4 w-4" aria-hidden="true" />
             {/* this hidden checkbox controls the state */}
           </label>
 
           {/* 4. cart links */}
-          <NavLink to="cart" className="btn btn-ghost btn-circle btn-md ml-4">
+          <NavLink 
+            to="cart" 
+            className="btn btn-ghost btn-circle btn-md ml-4"
+            aria-label={`Shopping cart with ${numItemsInCart} items`}
+          >
             <div className="indicator">
-              <BsCart3 className="h-6 w-6" />
-              <span className="badge badge-sm badge-primary indicator-item">
+              <BsCart3 className="h-6 w-6" aria-hidden="true" />
+              <span 
+                className="badge badge-sm badge-primary indicator-item"
+                aria-label={`${numItemsInCart} items in cart`}
+              >
                 {numItemsInCart}
               </span>
             </div>
