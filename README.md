@@ -295,9 +295,8 @@ _Shopping cart with real-time updates, Australian GST calculation, and free ship
 
 ```bash
 # Clone the repository
-git clone https://github.com/Tracy1112/Furno-E-commerce-Platform.git
-cd Furno-E-commerce-Platform
-# Note: Repository may be renamed to NomadLiving-Boutique in the future
+git clone https://github.com/Tracy1112/NomadLiving-Boutique.git
+cd NomadLiving-Boutique
 
 # Install dependencies
 npm install
@@ -571,7 +570,7 @@ MIT License - feel free to use this project for learning purposes.
 **Tracy1112**
 
 - GitHub: [@Tracy1112](https://github.com/Tracy1112)
-- Project Link: [https://github.com/Tracy1112/Furno-E-commerce-Platform](https://github.com/Tracy1112/Furno-E-commerce-Platform)
+- Project Link: [https://github.com/Tracy1112/NomadLiving-Boutique](https://github.com/Tracy1112/NomadLiving-Boutique)
 
 ---
 
