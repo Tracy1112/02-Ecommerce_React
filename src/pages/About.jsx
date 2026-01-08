@@ -17,16 +17,10 @@ const About = () => {
       </div>
       <div className="mt-8 text-xl leading-relaxed max-w-3xl mx-auto px-4">
         <p className="mb-6 ">
-          At Tracy Store, we believe furniture should inspire and enhance the
-          way you live. Our curated collection blends style, comfort, and
-          quality, bringing timeless designs that fit any home or office. From
-          modern classics to functional essentials, every piece is handpicked
-          for its durability and beauty.
+          Part of the NomadLiving Ecosystem. Sustainably sourced, designed for comfort.
         </p>
         <p>
-          We&apos;re here to make your space feel like home with affordable,
-          high-quality furniture and exceptional customer care. Discover your
-          perfect pieces and let us help you transform your space.
+          Every piece in our collection has been carefully selected from our luxury glamping stays. Experience these looks at our stays, then bring the wilderness home. From handcrafted furniture to premium textiles, each item tells a story of curated living inspired by nature.
         </p>
       </div>
     </>

@@ -1,8 +1,8 @@
 {
-  "name": "furno-ecommerce",
+  "name": "nomadliving-boutique",
   "private": true,
   "version": "1.0.0",
-  "description": "Modern headless e-commerce platform built with React 18, Redux Toolkit, and Strapi CMS - Australian freelance project",
+  "description": "NomadLiving Boutique - Shop the Stay. E-commerce platform for furniture featured in luxury glamping stays. Part of NomadLiving Digital Ecosystem.",
   "author": "Tracy1112",
   "license": "MIT",
   "type": "module",

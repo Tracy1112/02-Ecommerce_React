@@ -1,11 +1,11 @@
 # 🚀 Deployment Guide (English)
 
-Tailored for Furno and Australian job applications. Primary host: **Vercel** (Netlify optional).
+Tailored for NomadLiving Boutique and Australian job applications. Primary host: **Vercel** (Netlify optional).
 
 ## Quick Checklist
 - Code pushed to GitHub; `.env*` ignored via `.gitignore`.
 - Env vars set in Vercel for Production/Preview/Development.
-- Primary domain set (e.g., `https://furno-studio.vercel.app/`).
+- Primary domain set (e.g., `https://nomadliving-boutique.vercel.app/`).
 - Deployment protection disabled, or bypass token ready.
 
 ## Deploy on Vercel
@@ -22,7 +22,7 @@ Tailored for Furno and Australian job applications. Primary host: **Vercel** (Ne
 4) Verify: open URL, test home, products, cart, auth, mobile.
 
 ## Domain & Protection
-- Free subdomain: add e.g., `furno-studio.vercel.app` in Domains, set **Primary**.  
+- Free subdomain: add e.g., `nomadliving-boutique.vercel.app` in Domains, set **Primary**.  
 - Custom domain (optional): add in Domains; configure DNS (CNAME for `www`, ALIAS/A for apex if supported).  
 - Protection: disable for public demos, or create a bypass token then visit:  
   `https://your-domain/?x-vercel-set-bypass-cookie=true&x-vercel-protection-bypass=TOKEN`
@@ -59,4 +59,4 @@ npm run preview
 - Vite docs: https://vitejs.dev  
 
 Last updated: 2024-12-11  
-Maintainer: Furno Team
+Maintainer: NomadLiving Team

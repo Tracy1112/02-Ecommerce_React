@@ -1,14 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 44" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 44" fill="none">
   <defs>
-    <linearGradient id="furnoWord" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="nomadGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#60a5fa" />
       <stop offset="50%" stop-color="#3b82f6" />
       <stop offset="100%" stop-color="#1e3a8a" />
     </linearGradient>
   </defs>
 
-  <!-- Wordmark only -->
-  <g transform="translate(8 6)" fill="url(#furnoWord)" font-family="'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif">
-    <text x="0" y="26" font-size="28" font-weight="800" letter-spacing="1">Furno</text>
+  <!-- NomadLiving Boutique Wordmark -->
+  <g transform="translate(8 6)" font-family="'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif">
+    <!-- NOMAD with gradient -->
+    <text x="0" y="26" font-size="28" font-weight="800" letter-spacing="1.5" fill="url(#nomadGradient)">NOMAD</text>
+    <!-- Separator -->
+    <text x="110" y="26" font-size="24" font-weight="300" letter-spacing="2" fill="currentColor" opacity="0.6">|</text>
+    <!-- BOUTIQUE -->
+    <text x="130" y="26" font-size="28" font-weight="600" letter-spacing="1" fill="currentColor">BOUTIQUE</text>
   </g>
 </svg>

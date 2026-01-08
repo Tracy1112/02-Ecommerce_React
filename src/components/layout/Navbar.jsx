@@ -5,8 +5,6 @@ import { FaBarsStaggered } from 'react-icons/fa6'
 import NavLinks from './NavLinks'
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleTheme } from '../../features/user/userSlice'
-import logo from '../../assets/logo.svg'
-import logoIcon from '../../assets/logo-icon.svg'
 
 // const themes = {
 //   winter: 'winter',
@@ -46,16 +44,13 @@ const Navbar = () => {
           <NavLink
             to="/"
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-            aria-label="Furno home page"
+            aria-label="NomadLiving Boutique home page"
           >
-            {/* Full logo for large screens */}
-            <img
-              src={logo}
-              alt="Furno - Modern Furniture & Living"
-              className="hidden lg:block h-14 w-auto"
-            />
-            {/* Icon only for small screens */}
-            <img src={logoIcon} alt="Furno" className="lg:hidden h-13 w-13" />
+            {/* Text logo for NomadLiving Boutique */}
+            <span className="text-xl font-bold tracking-tight">
+              <span className="text-primary">NOMAD</span>
+              <span className="text-base-content"> | BOUTIQUE</span>
+            </span>
           </NavLink>
           {/* 1-1. Dropdown nav links: small screen appear*/}
           <div className="dropdown">
@@ -73,6 +68,18 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52"
             >
               <NavLinks />
+              {/* Cross-link to NomadLiving Stays */}
+              <li>
+                <a
+                  href="https://nomadliving-stays.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="capitalize text-primary font-semibold"
+                  title="Experience these looks at our Stays"
+                >
+                  Book a Stay
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -80,6 +87,18 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal ">
             <NavLinks />
+            {/* Cross-link to NomadLiving Stays */}
+            <li>
+              <a
+                href="https://nomadliving-stays.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="capitalize text-primary font-semibold hover:text-primary-focus transition-colors"
+                title="Experience these looks at our Stays"
+              >
+                Book a Stay
+              </a>
+            </li>
           </ul>
         </div>
 

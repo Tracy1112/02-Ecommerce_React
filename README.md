@@ -1,8 +1,8 @@
-# 🛍️ Furno E-commerce Platform
+# 🛍️ NomadLiving Boutique
 
-> Modern, full-featured e-commerce platform built with React 18, Redux Toolkit, and Strapi CMS. A production-ready application showcasing modern web development best practices.
+> Shop the Stay. Modern e-commerce platform for furniture featured in luxury glamping stays. Built with React 18, Redux Toolkit, and Strapi CMS. Part of the NomadLiving Digital Ecosystem.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-00C7B7?style=for-the-badge&logo=vercel)](https://furno-studio.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-00C7B7?style=for-the-badge&logo=vercel)](https://nomadliving-boutique.vercel.app/)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
 [![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-1.9.5-764ABC?style=for-the-badge&logo=redux)](https://redux-toolkit.js.org/)
 [![TypeScript](https://img.shields.io/badge/Vite-6.1-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
@@ -24,7 +24,7 @@
 
 ## 🎯 Overview
 
-Furno is a modern e-commerce platform developed as a freelance project for the Australian market. This production-ready application demonstrates real-world development practices and proficiency in:
+**NomadLiving Boutique** is a premium e-commerce platform that brings the "Shop the Stay" concept to life. As part of the NomadLiving ecosystem, this boutique allows guests to purchase the same high-quality furniture, textiles, and home accessories they experience during their luxury glamping stays. This production-ready application demonstrates real-world development practices and proficiency in:
 
 - **State Management**: Redux Toolkit for client-side state, React Query for server state
 - **Modern React Patterns**: Hooks, custom hooks, component composition
@@ -34,9 +34,16 @@ Furno is a modern e-commerce platform developed as a freelance project for the A
 
 ### 📋 Project Background
 
-This project was developed as a freelance e-commerce solution for an Australian client. It demonstrates real-world development practices including:
+**NomadLiving Boutique** is the lifestyle retail arm of **NomadLiving**, a luxury glamping and wilderness experience brand. This project was developed to create a seamless "Shop the Stay" experience, allowing guests to bring the curated comfort of their stays into their own homes.
 
-- **Client Requirements**: Understanding and implementing business requirements (cart, checkout, order management)
+**Key Business Logic:**
+
+- **Shop the Stay**: Users experience premium furniture and home goods at NomadLiving glamping stays, then purchase the same items through this boutique
+- **Cross-Platform Integration**: Direct connection between the booking platform (NomadLiving Stays) and the retail platform (this boutique)
+- **Curated Collection**: Every product is handpicked from actual stays, ensuring quality and authenticity
+
+**Technical Excellence:**
+
 - **Production-Ready Code**: Comprehensive error handling, loading states, and user feedback
 - **Australian Market Localization**: AUD currency formatting, GST (10%) tax calculation, and Australian locale support
 - **Full-Stack Integration**: Seamless integration with Strapi CMS backend for content management
@@ -177,6 +184,7 @@ _Shopping cart with real-time updates, order summary, and checkout flow_
 # Clone the repository
 git clone https://github.com/Tracy1112/Furno-E-commerce-Platform.git
 cd Furno-E-commerce-Platform
+# Note: Repository may be renamed to NomadLiving-Boutique in the future
 
 # Install dependencies
 npm install
@@ -429,7 +437,7 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
 
 ### Live Demo
 
-🌐 **Live Application**: [https://furno-studio.vercel.app/](https://furno-studio.vercel.app/)
+🌐 **Live Application**: [https://nomadliving-boutique.vercel.app/](https://nomadliving-boutique.vercel.app/)
 
 ## 📊 Project Metrics
 
