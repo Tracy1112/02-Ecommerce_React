@@ -95,18 +95,6 @@ const Navbar = () => {
         {/* 3. theme icons */}
 
         <div className="navbar-end">
-          {/* Cross-link to NomadLiving Stays - Highlighted Button */}
-          <a
-            href="https://nomadliving-stays.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary btn-sm hidden lg:flex gap-2 mr-2 animate-pulse hover:animate-none hover:scale-105 transition-transform"
-            title="Experience these looks at our Stays"
-          >
-            <TbTent className="h-4 w-4" />
-            <span className="font-semibold">Book a Stay</span>
-          </a>
-
           <label className="swap swap-rotate" aria-label="Toggle theme">
             <input
               type="checkbox"
@@ -119,10 +107,22 @@ const Navbar = () => {
             {/* this hidden checkbox controls the state */}
           </label>
 
+          {/* Cross-link to NomadLiving Stays - Highlighted Button */}
+          <a
+            href="https://nomadliving-stays.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary btn-sm hidden lg:flex gap-2 mx-2 animate-pulse hover:animate-none hover:scale-105 transition-transform"
+            title="Experience these looks at our Stays"
+          >
+            <TbTent className="h-4 w-4" />
+            <span className="font-semibold">Book a Stay</span>
+          </a>
+
           {/* 4. cart links */}
           <NavLink
             to="cart"
-            className="btn btn-ghost btn-circle btn-md ml-4"
+            className="btn btn-ghost btn-circle btn-md"
             aria-label={`Shopping cart with ${numItemsInCart} items`}
           >
             <div className="indicator">
