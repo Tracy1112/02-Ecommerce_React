@@ -31,9 +31,8 @@ export const action =
           },
         }
       )
-      //   remove the query
+      // Remove cached orders query
       queryClient.removeQueries(['orders'])
-      
       store.dispatch(clearCart())
       toast.success('order placed successfully')
       return redirect('/orders')

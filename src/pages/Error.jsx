@@ -22,7 +22,6 @@ const ErrorMessage = ({ status, message, linkText, linkTo }) => (
 
 const Error = () => {
   const error = useRouteError()
-  // error is used in the conditional below
 
   if (error?.status === 404) {
     return (

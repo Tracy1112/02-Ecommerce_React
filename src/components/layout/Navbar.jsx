@@ -7,28 +7,7 @@ import NavLinks from './NavLinks'
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleTheme } from '../../features/user/userSlice'
 
-// const themes = {
-//   winter: 'winter',
-//   dracula: 'dracula',
-// }
-// const getThemeFromLocalStorage = () => {
-//   return localStorage.getItem('theme') || themes.winter
-// }
-
 const Navbar = () => {
-  // const [theme, setTheme] = useState(getThemeFromLocalStorage())
-
-  // const handleTheme = () => {
-  //   const { winter, dracula } = themes
-  //   const newTheme = theme === winter ? dracula : winter
-  //   setTheme(newTheme)
-  // }
-
-  // useEffect(() => {
-  //   document.documentElement.setAttribute('data-theme', theme)
-  //   localStorage.setItem('theme', theme)
-  // }, [theme])
-
   const numItemsInCart = useSelector(state => state.cartState.numItemsInCart)
 
   const theme = useSelector(state => state.userState.theme)
@@ -69,19 +48,6 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52"
             >
               <NavLinks />
-              {/* Cross-link to NomadLiving Stays */}
-              <li>
-                <a
-                  href="https://nomadliving-stays.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary btn-sm capitalize gap-2"
-                  title="Experience these looks at our Stays"
-                >
-                  <TbTent className="h-4 w-4" />
-                  Book a Stay
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -94,7 +60,20 @@ const Navbar = () => {
 
         {/* 3. theme icons */}
 
-        <div className="navbar-end">
+        <div className="navbar-end flex items-center gap-2">
+          {/* Cross-link to NomadLiving Stays - Highlighted Button */}
+          <a
+            href="https://nomadliving-stays.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary btn-sm gap-2 animate-pulse hover:animate-none hover:scale-105 transition-transform lg:mr-6"
+            title="Experience these looks at our Stays"
+          >
+            <TbTent className="h-4 w-4" />
+            <span className="font-semibold hidden sm:inline">Book a Stay</span>
+            <span className="font-semibold sm:hidden">Stay</span>
+          </a>
+
           <label className="swap swap-rotate" aria-label="Toggle theme">
             <input
               type="checkbox"
@@ -107,22 +86,10 @@ const Navbar = () => {
             {/* this hidden checkbox controls the state */}
           </label>
 
-          {/* Cross-link to NomadLiving Stays - Highlighted Button */}
-          <a
-            href="https://nomadliving-stays.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary btn-sm hidden lg:flex gap-2 mx-2 animate-pulse hover:animate-none hover:scale-105 transition-transform"
-            title="Experience these looks at our Stays"
-          >
-            <TbTent className="h-4 w-4" />
-            <span className="font-semibold">Book a Stay</span>
-          </a>
-
           {/* 4. cart links */}
           <NavLink
             to="cart"
-            className="btn btn-ghost btn-circle btn-md"
+            className="btn btn-ghost btn-circle btn-md ml-4"
             aria-label={`Shopping cart with ${numItemsInCart} items`}
           >
             <div className="indicator">

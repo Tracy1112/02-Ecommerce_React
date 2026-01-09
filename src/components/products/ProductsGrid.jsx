@@ -5,8 +5,20 @@ import { formatPrice } from '../../utils'
 const ProductsGrid = () => {
   const { products } = useLoaderData()
   // Get base URL for Strapi images
-  const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:1337/api'
+  // Use remote API by default (most developers don't run Strapi locally)
+  const apiUrl = import.meta.env.VITE_API_URL || 'https://strapi-store-server.onrender.com/api'
   const strapiBaseURL = apiUrl.replace('/api', '')
+  
+  // Handle empty products array
+  if (!products || products.length === 0) {
+    return (
+      <div className="pt-12 text-center">
+        <p className="text-lg text-base-content/70">
+          No featured products available at the moment. Please check back later.
+        </p>
+      </div>
+    )
+  }
   
   return (
     <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

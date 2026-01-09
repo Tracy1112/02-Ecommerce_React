@@ -10,9 +10,16 @@ const featuredProductsQuery = {
 }
 
 export const loader = (queryClient) => async () => {
-  const response = await queryClient.ensureQueryData(featuredProductsQuery)
-  const products = response.data.data
-  return { products }
+  try {
+    const response = await queryClient.ensureQueryData(featuredProductsQuery)
+    const products = response?.data?.data || []
+    return { products }
+  } catch (error) {
+    // Log error but don't crash the page
+    console.error('Error loading featured products:', error)
+    // Return empty array so page can still render
+    return { products: [] }
+  }
 }
 
 const Landing = () => {

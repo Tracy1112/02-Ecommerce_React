@@ -2,11 +2,22 @@ import axios from 'axios'
 
 /**
  * API Base URL from environment variables
- * Falls back to localhost for development if not set
+ * Falls back to remote API (https://strapi-store-server.onrender.com/api) if not set
  * In production, VITE_API_URL must be set in Vercel environment variables
  */
 const getBaseURL = () => {
   const apiUrl = import.meta.env.VITE_API_URL
+  
+  // Use remote API by default (most developers don't run Strapi locally)
+  const defaultUrl = 'https://strapi-store-server.onrender.com/api'
+  const finalUrl = apiUrl || defaultUrl
+  
+  // Debug: Log API URL in development
+  if (import.meta.env.DEV) {
+    console.log('🔍 API Configuration:')
+    console.log('  - VITE_API_URL from env:', apiUrl || 'not set')
+    console.log('  - Final API URL:', finalUrl)
+  }
   
   if (!apiUrl && import.meta.env.PROD) {
     console.error(
@@ -14,11 +25,9 @@ const getBaseURL = () => {
       'Please set VITE_API_URL in Vercel environment variables:\n' +
       'https://strapi-store-server.onrender.com/api'
     )
-    // Return a placeholder that will fail clearly
-    return 'https://strapi-store-server.onrender.com/api'
   }
   
-  return apiUrl || 'http://localhost:1337/api'
+  return finalUrl
 }
 
 const baseURL = getBaseURL()
