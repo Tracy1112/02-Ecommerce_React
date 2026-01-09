@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { BsCart3, BsMoonFill, BsSunFill } from 'react-icons/bs'
 import { FaBarsStaggered } from 'react-icons/fa6'
+import { TbTent } from 'react-icons/tb'
 import NavLinks from './NavLinks'
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleTheme } from '../../features/user/userSlice'
@@ -74,9 +75,10 @@ const Navbar = () => {
                   href="https://nomadliving-stays.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="capitalize text-primary font-semibold"
+                  className="btn btn-primary btn-sm capitalize gap-2"
                   title="Experience these looks at our Stays"
                 >
+                  <TbTent className="h-4 w-4" />
                   Book a Stay
                 </a>
               </li>
@@ -87,24 +89,24 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal ">
             <NavLinks />
-            {/* Cross-link to NomadLiving Stays */}
-            <li>
-              <a
-                href="https://nomadliving-stays.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="capitalize text-primary font-semibold hover:text-primary-focus transition-colors"
-                title="Experience these looks at our Stays"
-              >
-                Book a Stay
-              </a>
-            </li>
           </ul>
         </div>
 
         {/* 3. theme icons */}
 
         <div className="navbar-end">
+          {/* Cross-link to NomadLiving Stays - Highlighted Button */}
+          <a
+            href="https://nomadliving-stays.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary btn-sm hidden lg:flex gap-2 mr-2 animate-pulse hover:animate-none hover:scale-105 transition-transform"
+            title="Experience these looks at our Stays"
+          >
+            <TbTent className="h-4 w-4" />
+            <span className="font-semibold">Book a Stay</span>
+          </a>
+
           <label className="swap swap-rotate" aria-label="Toggle theme">
             <input
               type="checkbox"
