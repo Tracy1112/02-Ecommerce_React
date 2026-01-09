@@ -37,7 +37,7 @@ Built with **React 18**, **Redux Toolkit**, and **React Query**, this production
 
 ## 🔍 Problem Statement
 
-Guests staying in luxury accommodations—whether glamping sites, boutique hotels, or high-end rentals—frequently encounter beautifully curated furniture and home goods that enhance their experience. However, when they ask the inevitable question: *"Where can I buy this lamp/chair/sofa?"*, the answer is typically:
+Guests staying in luxury accommodations—whether glamping sites, boutique hotels, or high-end rentals—frequently encounter beautifully curated furniture and home goods that enhance their experience. However, when they ask the inevitable question: _"Where can I buy this lamp/chair/sofa?"_, the answer is typically:
 
 - ❌ **No direct sales channel** - Properties don't have retail operations
 - ❌ **Fragmented experience** - Guests must search elsewhere, losing brand connection
@@ -194,6 +194,7 @@ _Shopping cart with real-time updates, Australian GST calculation, and free ship
 **Dual-State Architecture:**
 
 1. **Redux Toolkit** (Client State)
+
    - **Cart State**: Complex cart management with persistent storage (localStorage)
    - **User State**: Authentication, theme preferences
    - **Why Redux**: Complex cart logic (totals, tax, shipping) requires predictable state updates
